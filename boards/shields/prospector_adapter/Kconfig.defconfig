@@ -47,7 +47,9 @@ endchoice
 config LV_COLOR_16_SWAP
 	default y
 
+# ▼ ここに int を追加してエラーを修正しました
 config LV_DISP_DEF_REFR_PERIOD
+    int
     default 20
 
 choice LV_FONT_DEFAULT
