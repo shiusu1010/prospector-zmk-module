@@ -47,7 +47,6 @@ endchoice
 config LV_COLOR_16_SWAP
 	default y
 
-# ▼ ここに int を追加してエラーを修正しました
 config LV_DISP_DEF_REFR_PERIOD
     int
     default 20
@@ -62,8 +61,9 @@ config PWM
 config LED
     default y
 
-config PROSPECTOR_USE_AMBIENT_LIGHT_SENSOR
-    select SENSOR
-    select APDS9960
+# ▼ Soshoには不要な環境光センサーの設定をコメントアウト（無効化）しました
+# config PROSPECTOR_USE_AMBIENT_LIGHT_SENSOR
+#     select SENSOR
+#     select APDS9960
 
 endif
